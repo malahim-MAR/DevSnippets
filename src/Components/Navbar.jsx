@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Navbar = () => {
   return (
@@ -6,21 +7,23 @@ const Navbar = () => {
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {" "}
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />{" "}
-            </svg>
+            <Link to={"/"}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {" "}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />{" "}
+              </svg>
+            </Link>
           </div>
           <ul
             tabIndex={0}
@@ -63,20 +66,30 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <Link to={"/"}>
+          <a className="btn btn-ghost text-xl">daisyUI</a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Home</a>
+            <Link to={"/"}>
+              <a>Home</a>
+            </Link>
           </li>
           <li>
-            <a>About Dev Snippets</a>
+            <Link to={"/About"}>
+              <a>About Dev Snippets</a>
+            </Link>
           </li>
           <li>
             <details>
-              <summary>Our Services</summary>
-              <ul className="p-2">
+              <summary>
+                {" "}
+                <Link to={"/Services"}>Our Services</Link>
+              </summary>
+
+              <ul className="p-2 min-w-max z-50">
                 <li>
                   <a>React UI Snippets</a>
                 </li>
@@ -87,7 +100,9 @@ const Navbar = () => {
                   <a>Shopify .Liquid Snippets</a>
                 </li>
                 <li>
-                  <a>Ai Prompts For Section</a>
+                  <Link to={"/ready-to-use-prompts"}>
+                    <a>Ai Prompts For Section</a>
+                  </Link>
                 </li>
                 <li>
                   <a>Github Projects Links</a>
@@ -95,14 +110,21 @@ const Navbar = () => {
                 <li>
                   <a>Live Code Preview </a>
                 </li>
+                <li>
+                  <a>Wordpress Elementor Customized Snippets </a>
+                </li>
               </ul>
             </details>
           </li>
           <li>
-            <a>Support Us </a>
+            <Link to={"/"}>
+              <a>Support Us </a>
+            </Link>
           </li>
           <li>
-            <a>Contact Us </a>
+            <Link to={"/"}>
+              <a>Contact Us </a>
+            </Link>
           </li>
         </ul>
       </div>
