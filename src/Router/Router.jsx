@@ -5,6 +5,7 @@ import Services from "../Pages/Services";
 import Layout from "../Layout";
 import { createBrowserRouter } from "react-router-dom";
 import Prompts from "../Pages/Prompts";
+import Contact from "../Pages/Contact";
 
 export const Router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ export const Router = createBrowserRouter([
       {
         path: "About",
         element: <About />,
+      },
+        {
+        path: "contact",
+        element: <Contact />,
       },
       {
         path: "Services",

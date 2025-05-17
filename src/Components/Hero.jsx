@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Hero = () => {
   return (
@@ -14,21 +15,17 @@ const Hero = () => {
             Copy, customize, and drop developer-friendly components into your
             next project.
           </p>
-          <div className="flex gap-4">
-            <a
-              href="#snippets"
-              className="bg-green-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-600 transition"
-            >
-              Browse Snippets
-            </a>
-            <a
-              href="https://github.com/your-repo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-gray-400 px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition"
-            >
-              View on GitHub
-            </a>
+          <div className="flex gap-4 py-4 ">
+            <Link to={"/Services"}>
+              <a className="bg-green-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-600 transition">
+                Browse Snippets
+              </a>
+            </Link>
+            <Link to={"/Services"}>
+              <a className="border border-gray-400 px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition">
+                View GitHub Repo
+              </a>
+            </Link>
           </div>
         </div>
 

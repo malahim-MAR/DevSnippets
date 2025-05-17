@@ -62,7 +62,9 @@ const Navbar = () => {
               <a>Support Us </a>
             </li>
             <li>
-              <a>Contact Us </a>
+              <Link to={"/contact"}>
+                <a>Contact Us </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -122,7 +124,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to={"/"}>
+            <Link to={"/contact"}>
               <a>Contact Us </a>
             </Link>
           </li>

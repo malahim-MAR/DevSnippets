@@ -56,7 +56,7 @@ export default function ContactSection() {
                     placeholder="john@example.com"
                   />
                   <div className="flex items-center bg-base-100 rounded-btn border border-base-300">
-                    <span className="px-3 text-neutral-content/50">+</span>
+                    <span className="px-3 text-neutral-content/50">+ 92</span>
                     <input
                       type="tel"
                       className="input bg-transparent border-none flex-1 font-mono"
